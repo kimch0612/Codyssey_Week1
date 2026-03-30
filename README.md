@@ -27,3 +27,4 @@ Week-1: AI/SW 개발 워크스테이션 구축
 - [터미널 실습](./documents/1_terminal.md)
 - [퍼미션](./documents/2_permission.md)
 - [도커 환경 점검](./documents/3_docker_env.md)
+- [도커 컨테이너 실행](./documents/4_docker_deploy.md)
