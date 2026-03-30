@@ -11,7 +11,7 @@ Week-1: AI/SW 개발 워크스테이션 구축
   
 ### 1) Index
 - 터미널 실습
-- 퍼미션
+- 퍼미션 실습
 - 도커 환경 점검
 - 도커 컨테이너 실행
 - Dockerfile 확인
@@ -26,3 +26,4 @@ Week-1: AI/SW 개발 워크스테이션 구축
 
 - [터미널 실습](./documents/1_terminal.md)
 - [퍼미션](./documents/2_permission.md)
+- [도커 환경 점검](./documents/3_docker_env.md)
