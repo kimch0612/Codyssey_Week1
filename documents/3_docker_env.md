@@ -111,3 +111,32 @@ WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
 
 kinch06120270@c4r6s3 week1 % 
 ```
+
+> 도커 이미지 리스트 출력
+```bash
+kinch06120270@c4r6s3 week1 % docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       24.04     f794f40ddfff   5 weeks ago   78.1MB
+
+kinch06120270@c4r6s3 week1 % 
+```
+
+> 만들어진 컨테이너 리스트 출력
+```bash
+kinch06120270@c4r6s3 week1 % docker ps -a
+CONTAINER ID   IMAGE          COMMAND          CREATED        STATUS                      PORTS     NAMES
+b69c1053315d   f794f40ddfff   "/bin/bash -d"   16 hours ago   Exited (2) 16 hours ago               relaxed_hugle
+b2393aea5218   f794f40ddfff   "/bin/bash -d"   16 hours ago   Exited (2) 16 hours ago               jovial_raman
+7c822d0521b2   f794f40ddfff   "/bin/bash"      16 hours ago   Exited (127) 16 hours ago             youthful_chebyshev
+db3394cadb6a   f794f40ddfff   "Ubuntu"         16 hours ago   Created                               xenodochial_mclaren
+
+kinch06120270@c4r6s3 week1 % 
+```
+
+> 도커 컨테이너 실행
+```bash
+kinch06120270@c4r6s3 week1 % docker run -d --name ubuntu f794f40ddfff /bin/bash
+dbccb6e7683fd38f06d1d47faef7695d3b3939946844c45b3beff2f67538e6b1
+
+kinch06120270@c4r6s3 week1 % 
+```
