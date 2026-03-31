@@ -6,4 +6,7 @@ RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     apt-get clean
 
-CMD ["python3", "--version"]
+WORKDIR /app
+COPY ./app /app
+
+CMD ["python3", "-m", "http.server", "8000"]
