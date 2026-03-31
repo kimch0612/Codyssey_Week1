@@ -19,6 +19,12 @@ branch.master.remote=origin
 branch.master.merge=refs/heads/master
 ```
 
+> VSCode GitHub 로그인 및 저장소 연동 화면
+
+아래 이미지는 VSCode에서 GitHub 계정이 연결된 상태를 확인한 화면이다.
+
+![VSCode GitHub 연동](../images/vscode_github.png)
+
 > 연결 결과
 ```bash
 kinch06120270@c4r6s3 week1 % ssh -T git@github.com

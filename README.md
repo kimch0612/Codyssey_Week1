@@ -37,7 +37,7 @@
 - [x] Docker 볼륨 영속성 확인
 - [x] Git 설정 및 GitHub 연동 기록
 - [x] 트러블슈팅 2건 기록
-- [ ] VSCode GitHub 로그인 및 저장소 연동 증거 보강
+- [x] VSCode GitHub 로그인 및 저장소 연동 증거 보강
 - [ ] 기본 브랜치 설정 증거 보강
 - [ ] 브라우저 주소창 포함 접속 스크린샷 보강
 - [ ] 학습 목표 설명형 정리 보강
@@ -93,6 +93,7 @@
 ### Git / GitHub
 
 - Git 설정 확인: `git config --list`
+- VSCode 연동 증거: `images/vscode_github.png`
 - GitHub SSH 인증 확인: `ssh -T git@github.com`
 - 커밋 및 푸시: `git add .`, `git commit`, `git push`
 - 결과 문서: [documents/7_git.md](./documents/7_git.md)
