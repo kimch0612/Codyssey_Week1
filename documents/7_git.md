@@ -18,3 +18,11 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 branch.master.remote=origin
 branch.master.merge=refs/heads/master
 ```
+
+> 연결 결과
+```bash
+kinch06120270@c4r6s3 week1 % ssh -T git@github.com
+Hi kimch0612! You've successfully authenticated, but GitHub does not provide shell access.
+
+kinch06120270@c4r6s3 week1 % 
+```
