@@ -94,3 +94,26 @@ kinch06120270@c4r6s3 week1 % curl http://localhost:8080
 
 kinch06120270@c4r6s3 week1 % 
 ```
+
+> 호스트 경로를 컨테이너에 바인드 하기
+```bash
+kinch06120270@c4r6s3 df % ls -alh
+total 8
+drwxr-xr-x  4 kinch06120270  kinch06120270   128B Mar 31 10:55 .
+drwxr-xr-x  8 kinch06120270  kinch06120270   256B Mar 31 10:55 ..
+drwxr-xr-x  3 kinch06120270  kinch06120270    96B Mar 31 10:52 app
+-rw-r--r--  1 kinch06120270  kinch06120270   221B Mar 31 10:53 Dockerfile
+
+kinch06120270@c4r6s3 df % docker run -d -p 8080:8000 -v $(pwd)/app:/app --name bind_con my_web_server
+1f7da1176fefdde002b30c23624e3e89704a9f965996ea973e34d4601040bc8c
+
+kinch06120270@c4r6s3 df % curl localhost:8080
+<h1>Hello from Docker Python Server!</h1>
+
+kinch06120270@c4r6s3 df % echo '<h1>Modified by Bind Mount!</h1>' > app/index.html
+
+kinch06120270@c4r6s3 df % curl localhost:8080                                     
+<h1>Modified by Bind Mount!</h1>
+
+kinch06120270@c4r6s3 df %
+```
