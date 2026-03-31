@@ -76,7 +76,7 @@ ubuntu           24.04     f794f40ddfff   5 weeks ago          78.1MB
 kinch06120270@c4r6s3 week1 %
 ```
 
-> 컨테이너 실행 후 웹 서버 접속해보기
+> 컨테이너 실행 후 웹 서버 접속
 ```bash
 kinch06120270@c4r6s3 week1 % docker run -d -p 8080:8000 --name my_web_con my_web_server
 538cfa625c10345c0fbb680bf70ebfcbd30135681c55d755b974d0aa9c78fdb2
@@ -95,7 +95,7 @@ kinch06120270@c4r6s3 week1 % curl http://localhost:8080
 kinch06120270@c4r6s3 week1 % 
 ```
 
-> 호스트 경로를 컨테이너에 바인드 하기
+> 호스트 경로를 컨테이너에 바인드
 ```bash
 kinch06120270@c4r6s3 df % ls -alh
 total 8
@@ -116,4 +116,40 @@ kinch06120270@c4r6s3 df % curl localhost:8080
 <h1>Modified by Bind Mount!</h1>
 
 kinch06120270@c4r6s3 df %
+```
+
+> 도커 볼륨 생성
+```bash
+kinch06120270@c4r6s3 week1 % docker volume create my_data_vol
+my_data_vol
+
+kinch06120270@c4r6s3 week1 % docker volume ls
+DRIVER    VOLUME NAME
+local     my_data_vol
+
+kinch06120270@c4r6s3 week1 % 
+```
+
+> 컨테이너에 볼륨 연결하고 파일 생성
+```bash
+kinch06120270@c4r6s3 week1 % docker run -d --name vol_con -v my_data_vol:/data my_web_server
+461b37a096eaed9623ea3bed21e028bd65393fa1e11157292413e79ca0b29640
+
+kinch06120270@c4r6s3 week1 % docker exec vol_con touch /data/test_file.txt
+
+kinch06120270@c4r6s3 week1 % docker exec vol_con ls /data
+test_file.txt
+
+kinch06120270@c4r6s3 week1 % 
+```
+
+> 연결했던 컨테이너를 삭제하고 다시 생성해서 파일이 존재하는지 확인
+```bash
+kinch06120270@c4r6s3 week1 % docker rm -f vol_con
+vol_con
+
+kinch06120270@c4r6s3 week1 % docker run -it --rm -v my_data_vol:/data ubuntu:24.04 ls /data
+test_file.txt
+
+kinch06120270@c4r6s3 week1 % 
 ```
