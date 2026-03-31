@@ -45,6 +45,7 @@
 - 숨김 파일 포함 목록 확인: `ls -alh`
 - 파일 생성/복사/이동/이름 변경/삭제: `touch`, `cp`, `mv`, `rm`
 - 파일 내용 확인: `cat`
+- 폴더 이동: `cd`
 - 결과 문서: [documents/1_terminal.md](./documents/1_terminal.md)
 
 ### 권한 실습

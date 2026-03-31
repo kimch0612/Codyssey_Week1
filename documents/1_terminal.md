@@ -141,3 +141,16 @@ Hello World
 
 kinch06120270@c4r6s3 week1 % 
 ```
+
+> 폴더 이동
+```bash
+kinch06120270@c4r6s3 week1 % ls
+df              documents       images          README.md
+
+kinch06120270@c4r6s3 week1 % cd df
+
+kinch06120270@c4r6s3 df % pwd
+/Users/kinch06120270/Desktop/week1/df
+
+kinch06120270@c4r6s3 df %
+```
