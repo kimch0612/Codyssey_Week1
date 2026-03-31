@@ -167,3 +167,12 @@ kinch06120270@c4r6s3 week1 %
 CONTAINER ID   NAME         CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS 
 63a802d42583   ubuntu-lab   0.00%     4.172MiB / 15.67GiB   0.03%     1.13kB / 126B   4.45MB / 0B   1 
 ```
+
+### 간단한 정리
+- 컨테이너를 실행할 때 exec와 attach에는 다음과 같은 차이점이 존재한다
+  - attach: 달리는 버스 조수석에 앉기
+    - 운전사가 뭘 하는지 다 볼 수 있고, 버스의 현재 내부 상태를 실시간으로 같이 확인할 수 있음
+    - 콘솔에서 exit를 입력하면 컨테이너 자체도 같이 꺼짐
+  - exec: 버스에 잠시 청소부가 들어옴
+    - 운전사가 뭘 하는진 관심 없고, 자기 할 일을 하고 뒷문으로 나감
+    - 콘솔에서 exit를 입력해도 컨테이너가 꺼지진 않음
