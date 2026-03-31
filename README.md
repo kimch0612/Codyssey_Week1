@@ -17,6 +17,7 @@ Week-1: AI/SW 개발 워크스테이션 구축
 - Dockerfile 확인
 - Dockerfile 기반 웹 서버 및 볼륨 실습
 - git 설정 및 github 연동
+- 오류 트러블슈팅
 
 ----------
 
@@ -29,3 +30,4 @@ Week-1: AI/SW 개발 워크스테이션 구축
 - [Dockerfile 확인](./documents/5_dockerfile.md)
 - [Dockerfile 기반 웹 서버 및 볼륨 실습](./documents/6_dockerfile_extra.md)
 - [git 설정 및 github 연동](./documents/7_git.md)
+- [오류 트러블슈팅](./documents/0_err.md)
