@@ -19,7 +19,7 @@ kinch06120270@c4r6s3 week1 % # 해결
 kinch06120270@c4r6s3 app % echo "<h1>Hello from Docker Python Server!</h1>" > index.html 
 zsh: event not found: </h1> # 앞쪽 <h1>엔 문제가 없었으니 </h1>에 붙은 !가 문제다?
 
-# 해결 방법은 간단하게 작은따옴표를 사용함
+# 작은따옴표를 사용하면 !를 무시하므로 해결 방법은 간단하게 작은따옴표를 사용함
 kinch06120270@c4r6s3 app % echo '<h1>Hello from Docker Python Server!</h1>' > index.html
 
 kinch06120270@c4r6s3 app % # 해결
