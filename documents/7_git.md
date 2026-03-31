@@ -76,3 +76,13 @@ Author: Changhwan Kim <kimch061279@gmail.com>
 Date:   Tue Mar 31 11:15:18 2026 +0900
 :
 ```
+
+> 기본 브런치
+```bash
+kinch06120270@c4r6s3 week1 % git config --global init.defaultBranch master
+
+kinch06120270@c4r6s3 week1 % git config --list | grep init.defaultbranch
+init.defaultbranch=master
+
+kinch06120270@c4r6s3 week1 % 
+```
