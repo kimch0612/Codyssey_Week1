@@ -95,6 +95,12 @@ kinch06120270@c4r6s3 week1 % curl http://localhost:8080
 kinch06120270@c4r6s3 week1 % 
 ```
 
+> 브라우저 접속 화면
+
+아래 이미지는 `http://localhost:8080`에 접속했을 때의 브라우저 화면이며, 주소창과 응답 페이지를 함께 확인할 수 있다.
+
+![웹 서버 접속 화면](../images/website.png)
+
 > 호스트 경로를 컨테이너에 바인드
 ```bash
 kinch06120270@c4r6s3 df % ls -alh
