@@ -124,19 +124,46 @@ kinch06120270@c4r6s3 week1 %
 > 만들어진 컨테이너 리스트 출력
 ```bash
 kinch06120270@c4r6s3 week1 % docker ps -a
-CONTAINER ID   IMAGE          COMMAND          CREATED        STATUS                      PORTS     NAMES
-b69c1053315d   f794f40ddfff   "/bin/bash -d"   16 hours ago   Exited (2) 16 hours ago               relaxed_hugle
-b2393aea5218   f794f40ddfff   "/bin/bash -d"   16 hours ago   Exited (2) 16 hours ago               jovial_raman
-7c822d0521b2   f794f40ddfff   "/bin/bash"      16 hours ago   Exited (127) 16 hours ago             youthful_chebyshev
-db3394cadb6a   f794f40ddfff   "Ubuntu"         16 hours ago   Created                               xenodochial_mclaren
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 kinch06120270@c4r6s3 week1 % 
 ```
 
 > 도커 컨테이너 실행
 ```bash
-kinch06120270@c4r6s3 week1 % docker run -d --name ubuntu f794f40ddfff /bin/bash
-dbccb6e7683fd38f06d1d47faef7695d3b3939946844c45b3beff2f67538e6b1
+kinch06120270@c4r6s3 week1 % docker run -itd --name ubuntu-lab f794f40ddfff /bin/bash
+63a802d42583360485e9ac763c47d2ac4a476f62017d18e895ae17618e1d4aa1
+
+kinch06120270@c4r6s3 week1 % docker ps -a
+CONTAINER ID   IMAGE          COMMAND       CREATED         STATUS        PORTS     NAMES
+63a802d42583   f794f40ddfff   "/bin/bash"   2 seconds ago   Up 1 second             ubuntu-lab
+
+kinch06120270@c4r6s3 week1 %
+```
+
+> 컨테이너 로그 출력
+```bash
+kinch06120270@c4r6s3 week1 % docker attach ubuntu-lab
+
+root@63a802d42583:/# echo "Hello World!"
+Hello World!
+
+root@63a802d42583:/# exit
+exit
+
+kinch06120270@c4r6s3 week1 % docker logs ubuntu-lab
+root@63a802d42583:/# echo "Hello World!"
+Hello World!
+root@63a802d42583:/# exit
+exit
 
 kinch06120270@c4r6s3 week1 % 
+```
+
+> 컨테이너 자원 사용 현황 출력
+```bash
+# docker stats
+
+CONTAINER ID   NAME         CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O     PIDS 
+63a802d42583   ubuntu-lab   0.00%     4.172MiB / 15.67GiB   0.03%     1.13kB / 126B   4.45MB / 0B   1 
 ```
